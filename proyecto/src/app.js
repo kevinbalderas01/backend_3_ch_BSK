@@ -8,12 +8,21 @@ import adoptionsRouter from './routes/adoption.router.js';
 import sessionsRouter from './routes/sessions.router.js';
 import errorHandler from "./middlewares/error.js"
 import mocksRouter from "./routes/mocks.router.js"
+import { swaggeroptions } from './utils/swagger.js';
+import swaggerJsdoc from 'swagger-jsdoc';
+import swaggerUiExpress from 'swagger-ui-express';
+import cors from 'cors';
 
 
 dotenv.config()
 const app = express();
 const PORT = process.env.PORT||8080;
 const connection = mongoose.connect(process.env.MONGO_URL)
+const specs = swaggerJsdoc(swaggeroptions);
+
+app.use(cors())
+
+app.use('/apidocs', swaggerUiExpress.serve, swaggerUiExpress.setup(specs))
 
 app.use(express.json());
 app.use(cookieParser());
