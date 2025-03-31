@@ -126,6 +126,38 @@ paths:
           description: Forbidden
         '500':
           description: Internal Server Error
+  /api/sessions/register:
+    post:
+      tags:
+        - Users
+      summary: Create a new user
+      description: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/createUser'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: Status of the request
+                    example: success
+                  _id:
+                    type: string
+                    description: User ID
+                    example: dediefirjfurheiodu
+        '404':
+          description: Forbidden
+        '500':
+          description: Internal Server Error
 components:
   schemas:
     User:
@@ -181,3 +213,23 @@ components:
         firstName: Johnny
         lastName: Don
         email: example@example.com
+    createUser:
+      type: object
+      properties:
+        first_name:
+          type: string
+          description: User first name
+        last_name:
+          type: string
+          description: User last name
+        email:
+          type: string
+          description: User email
+        password:
+          type: string
+          description: User password
+      example:
+        first_name: Kevin
+        last_name: Balderas
+        email: example@example.com
+        password: deded

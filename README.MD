@@ -23,4 +23,25 @@ Users collection          |  Pets collection
 :-------------------------:|:-------------------------:
 ![](./imgs/Captura%20de%20pantalla%20(1004).png)  |  ![](./imgs/Captura%20de%20pantalla%20(1005).png)
 
-[Link](https://hub.docker.com) de imagen de docker.
+## Documentación con Swagger
+![](./imgs/image.png)
+
+## Ejecución en Docker
+![](./imgs/Captura%20de%20pantalla%20(1251).png)
+
+![](./imgs/Captura%20de%20pantalla%20(1252).png)
+
+## Docker Hub
+
+[Link](https://hub.docker.com/r/kevinbalderas/proyecto-final-b3-ch-kbs) de imagen de docker.
+
+![](./imgs/Captura%20de%20pantalla%202025-03-30%20190218.png)
+
+### Comando
+```
+docker pull kevinbalderas/proyecto-final-b3-ch-kbs
+```
+### Variables de entorno
+
+
+[Link](https://drive.google.com/file/d/1pnJFQQrOKm6iw8BlaKUMvqo7QM8ueBnf/view?usp=sharing) de GoogleDrive para variables de entorno
